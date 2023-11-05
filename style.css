@@ -189,8 +189,6 @@
 }
 /* footer */
 
-* {box-sizing:border-box}
-
 /* Carousel */
 .carousel {
     margin-left: 2em;
@@ -207,7 +205,6 @@
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
 }
 
 /* Next & previous buttons */
@@ -275,6 +272,7 @@
 
 /* Fading animation */
 .fade {
+    animation: forwards;
     animation-name: fade;
     animation-duration: 1.5s;
 }
