@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "./image/card1.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 2,
+    "image": "./image/card2.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 3,
+    "image": "./image/card3.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 4,
+    "image": "./image/card4.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 5,
+    "image": "./image/card5.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 6,
+    "image": "./image/card6.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 1,
+    "image": "./image/card1.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  },
+  {
+    "id": 1,
+    "image": "./image/card1.png",
+    "price": "$1000.50",
+    "name": "New Chair"
+  }
+]
