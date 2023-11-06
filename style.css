@@ -193,7 +193,7 @@
 .carousel {
     margin-left: 2em;
     max-width: 500px;
-    min-width: 300px;
+    min-width: 500px;
 }
 
 /* Slideshow container */
@@ -203,9 +203,6 @@
     margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-}
 
 /* Next & previous buttons */
 .prev, .next {
@@ -290,7 +287,7 @@
 .product-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1500px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -308,4 +305,30 @@
     .carousel {
         margin: auto;
     }
+}
+
+/* product rating */
+.rating-result {
+    width: 265px;
+    margin: auto;
+    text-align: center;
+    flex-direction: row;
+}
+
+.rating-result span {
+    padding: 0;
+    font-size: 32px;
+    margin: 0 3px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.rating-result > span:before {
+    content: '★';
+}
+
+.rating-result > span.active {
+    color: gold;
+    background: white;
 }
