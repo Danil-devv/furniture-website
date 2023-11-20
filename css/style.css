@@ -20,7 +20,7 @@
 }
 
 .social-link i img:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
     border-radius: 50px;
 }
 
@@ -57,14 +57,14 @@
 .main-content {
     width: 100%;
     height: 90vh;
-    background-image: url(../image/background.png);
+    background-image: url(../image/main_page_background.jpg);
     background-size: cover;
     background-position: 70%;
 }
 
 /* navbar */
 #navbar-color {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 .navbar-nav {
@@ -80,7 +80,7 @@
 }
 
 .nav-link:hover {
-    color: #eaa600;
+    color: rgb(15, 133, 110);
 }
 
 /* navbar */
@@ -107,7 +107,7 @@
 }
 
 #btn1 button:hover {
-    background-color: #f8dd97;
+    background-color: rgb(106, 238, 219);
 }
 
 @media screen and (max-width: 420px) {
@@ -131,7 +131,7 @@
 }
 
 #btn2 button:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 /* card1 */
@@ -168,7 +168,7 @@
 }
 
 #btn3 button:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 @media screen and (max-width: 895px) {
@@ -189,7 +189,7 @@
 }
 
 #btn4 button:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 /* footer */
@@ -209,7 +209,7 @@
 }
 
 .icons i {
-    color: rgba(238, 224, 208);
+    color: rgb(106, 238, 219);
     font-size: 30px;
     cursor: pointer;
 }
@@ -435,7 +435,7 @@
 }
 
 #btn5 button:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 .shopping-cart-counter {
@@ -504,7 +504,7 @@
 }
 
 #btn10 button:hover {
-    background-color: rgba(238, 224, 208);
+    background-color: rgb(106, 238, 219);
 }
 
 @media screen and (max-width: 895px) {
