@@ -494,7 +494,22 @@
     display: block;
 }
 
-.dropdown-item:hover {
+#btn10 {
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn10 button:hover {
     background-color: rgba(238, 224, 208);
-    transition: background-color 0.6s ease;
+}
+
+@media screen and (max-width: 895px) {
+    #btn10 button {
+
+        width: 100px;
+    }
 }

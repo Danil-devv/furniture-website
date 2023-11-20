@@ -9,11 +9,11 @@ function update() {
         product = data[i-1];
         out += `<div class="col-md-3 py-3 py-md-0">
                             <div class="card" id="tpc">
-                                <img src='${product.image}' alt="" class="card image-top">
+                                <img src='${product.image}' alt="" class="card image-top" height="250px">
                                 <div class="card-body">
                                     <h3 class="card-titel text-center">${product.name}</h3>
                                     <p class="card-text text-center">$${product.price}</p>
-                                    <div id="btn3"><a href="product_card.html"><button>About</button></a></div>
+                                    <div id="btn3"><a href="product_card.html?id=${product.id-1}"><button>About</button></a></div>
                                     <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to card</button></a></div>
                                 </div>
                             </div>
@@ -77,11 +77,11 @@ fetch("./data/products.json")
             data.push(product)
             out += `<div class="col-md-3 py-3 py-md-0">
                             <div class="card" id="tpc">
-                                <img src='${product.image}' alt="" class="card image-top">
+                                <img src='${product.image}' alt="" class="card image-top" height="250px">
                                 <div class="card-body">
                                     <h3 class="card-titel text-center">${product.name}</h3>
                                     <p class="card-text text-center">$${product.price}</p>
-                                    <div id="btn3"><a href="product_card.html"><button>About</button></a></div>
+                                    <div id="btn3"><a href="product_card.html?id=${product.id-1}"><button>About</button></a></div>
                                     <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to card</button></a></div>
                                 </div>
                             </div>

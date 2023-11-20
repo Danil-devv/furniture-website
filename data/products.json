@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "image": "./image/card1.png",
+    "image": "./image/bed_2.png",
     "price": "300",
-    "name": "New Sofa"
+    "name": "Bed"
   },
   {
     "id": 2,
@@ -19,15 +19,15 @@
   },
   {
     "id": 4,
-    "image": "./image/card4.png",
+    "image": "./image/comp_chair1.webp",
     "price": "79",
-    "name": "Chair"
+    "name": "Computer Chair"
   },
   {
     "id": 5,
-    "image": "./image/card5.png",
+    "image": "./image/coffee_table_1.png",
     "price": "39",
-    "name": "Kitchen Chair"
+    "name": "Coffee Table"
   },
   {
     "id": 6,
@@ -37,14 +37,14 @@
   },
   {
     "id": 7,
-    "image": "./image/card1.png",
+    "image": "./image/yellow_chair_1.png",
     "price": "349",
-    "name": "Sofa v2"
+    "name": "Modern Chair"
   },
   {
     "id": 8,
-    "image": "./image/card1.png",
+    "image": "./image/glass_table_1.png",
     "price": "399",
-    "name": "Sofa v3"
+    "name": "Glass Table"
   }
 ]
