@@ -147,6 +147,7 @@ fetch("./data/products.json")
                 }
             }
 
+
             if (i === products.length) {
                 out += '</div>'
             }
