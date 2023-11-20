@@ -80,7 +80,13 @@
     <!-- card3 -->
     <div class="container">
         <h3 class="text-center" style="margin-top: 50px;">TREANDLY PRODUCTS</h3>
-
+        <div class="dropdown" id="dropdown">
+            <span><h5>Sort</h5></span>
+            <div class="dropdown-content">
+                <div class="dropdown-item" onclick="sortAscending()">By ascending</div>
+                <div class="dropdown-item" onclick="sortDescending()">By descending</div>
+            </div>
+        </div>
         <div id="data-output">
             <!-- Products from javascript file in here. -->
         </div>

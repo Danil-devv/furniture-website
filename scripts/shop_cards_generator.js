@@ -1,5 +1,38 @@
 let data = []
 
+
+function update() {
+    let placeholder = document.querySelector("#data-output");
+    let out = "<div class=\"row\" style=\"margin-top: 50px;\">";
+    let product;
+    for (let i = 1; i <= data.length; i++) {
+        product = data[i-1];
+        out += `<div class="col-md-3 py-3 py-md-0">
+                            <div class="card" id="tpc">
+                                <img src='${product.image}' alt="" class="card image-top">
+                                <div class="card-body">
+                                    <h3 class="card-titel text-center">${product.name}</h3>
+                                    <p class="card-text text-center">$${product.price}</p>
+                                    <div id="btn3"><a href="product_card.html"><button>About</button></a></div>
+                                    <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to card</button></a></div>
+                                </div>
+                            </div>
+                        </div>`;
+
+        if (i % 4 === 0) {
+            if (i !== data.length) {
+                out += `</div><div class="row" style="margin-top: 50px;">`
+            }
+        }
+
+        if (i === data.length) {
+            out += '</div>'
+        }
+    }
+
+    placeholder.innerHTML = out;
+}
+
 function addToCart(id) {
     let product;
     if (sessionStorage.getItem(String(id)) === null) {
@@ -10,6 +43,25 @@ function addToCart(id) {
         product.quantity++
         sessionStorage.setItem(String(id), JSON.stringify(product))
     }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.getElementById('dropdown');
+
+    dropdown.addEventListener('click', function () {
+        const dropdownContent = this.querySelector('.dropdown-content');
+        dropdownContent.classList.toggle('show');
+    });
+});
+
+function sortAscending() {
+    data.sort((a, b) => parseInt(a.price) - parseInt(b.price))
+    update()
+}
+
+function sortDescending() {
+    data.sort((a, b) => parseInt(b.price) - parseInt(a.price))
+    update()
 }
 
 fetch("./data/products.json")
@@ -29,7 +81,7 @@ fetch("./data/products.json")
                                 <div class="card-body">
                                     <h3 class="card-titel text-center">${product.name}</h3>
                                     <p class="card-text text-center">$${product.price}</p>
-                                    <div id="btn3"><a href="product_card.html"><button>Shop Now</button></a></div>
+                                    <div id="btn3"><a href="product_card.html"><button>About</button></a></div>
                                     <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to card</button></a></div>
                                 </div>
                             </div>

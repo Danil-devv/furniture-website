@@ -2,49 +2,49 @@
   {
     "id": 1,
     "image": "./image/card1.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "300",
+    "name": "New Sofa"
   },
   {
     "id": 2,
     "image": "./image/card2.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "215",
+    "name": "Comfort Chair"
   },
   {
     "id": 3,
     "image": "./image/card3.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "50",
+    "name": "Basic Chair"
   },
   {
     "id": 4,
     "image": "./image/card4.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "79",
+    "name": "Chair"
   },
   {
     "id": 5,
     "image": "./image/card5.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "39",
+    "name": "Kitchen Chair"
   },
   {
     "id": 6,
     "image": "./image/card6.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "699",
+    "name": "Modern Sofa"
   },
   {
     "id": 7,
     "image": "./image/card1.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "349",
+    "name": "Sofa v2"
   },
   {
     "id": 8,
     "image": "./image/card1.png",
-    "price": "1000",
-    "name": "New Chair"
+    "price": "399",
+    "name": "Sofa v3"
   }
 ]
