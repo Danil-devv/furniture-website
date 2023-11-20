@@ -1,11 +1,17 @@
 let data = []
+let banned  = []
 
 
 function update() {
     let placeholder = document.querySelector("#data-output");
     let out = "<div class=\"row\" style=\"margin-top: 50px;\">";
     let product;
+    let cnt = 0;
     for (let i = 1; i <= data.length; i++) {
+        if (banned[data[i-1].id - 1]) {
+            continue;
+        }
+        cnt += 1;
         product = data[i-1];
         out += `<div class="col-md-3 py-3 py-md-0">
                             <div class="card" id="tpc">
@@ -19,7 +25,7 @@ function update() {
                             </div>
                         </div>`;
 
-        if (i % 4 === 0) {
+        if (cnt % 4 === 0) {
             if (i !== data.length) {
                 out += `</div><div class="row" style="margin-top: 50px;">`
             }
@@ -52,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const dropdownContent = this.querySelector('.dropdown-content');
         dropdownContent.classList.toggle('show');
     });
+
+    const filterOpener = document.getElementById("filter-opener");
+
+    filterOpener.addEventListener('click', function () {
+        const filterContainer = document.getElementById("filt-cont");
+        filterContainer.classList.toggle('show')
+    })
 });
 
 function sortAscending() {
@@ -62,6 +75,28 @@ function sortAscending() {
 function sortDescending() {
     data.sort((a, b) => parseInt(b.price) - parseInt(a.price))
     update()
+}
+
+function isInteger(value) {
+    return !!value.match(/^\d+$/);
+}
+
+function filterByPrice() {
+    let min = document.getElementById("minValue").value;
+    let max = document.getElementById("maxValue").value;
+
+    if (!isInteger(min) || !isInteger(max)) {
+        return;
+    }
+
+    let mn = Number(min);
+    let mx = Number(max);
+    for (let i = 0; i < data.length; i++) {
+        let product = data[i];
+        banned[product.id-1] = (product.price > mx || product.price < mn);
+    }
+
+    update();
 }
 
 fetch("./data/products.json")
@@ -75,6 +110,7 @@ fetch("./data/products.json")
         for (let i = 1; i <= products.length; i++) {
             product = products[i-1];
             data.push(product)
+            banned.push(false)
             out += `<div class="col-md-3 py-3 py-md-0">
                             <div class="card" id="tpc">
                                 <img src='${product.image}' alt="" class="card image-top" height="250px">
