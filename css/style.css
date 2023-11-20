@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 /* navbar top */
-.navbar-top{
+.navbar-top {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -11,41 +12,49 @@
     text-align: center;
     justify-content: space-between;
 }
-.social-link i img{
+
+.social-link i img {
     margin-left: 10px;
     transition: 0.5s ease;
     cursor: pointer;
 }
-.social-link i img:hover{
-    background-color: rgba(238,224,208);
+
+.social-link i img:hover {
+    background-color: rgba(238, 224, 208);
     border-radius: 50px;
 }
-@media screen and (max-width:420px){
-    .social-link i img{
+
+@media screen and (max-width: 420px) {
+    .social-link i img {
         width: 20px;
     }
 }
-.logo h3{
+
+.logo h3 {
     font-weight: bold;
 }
-@media screen and (max-width:420px){
-    .logo h3{
+
+@media screen and (max-width: 420px) {
+    .logo h3 {
         font-size: 20px;
     }
 }
-.icons i img{
+
+.icons i img {
     margin-left: 10px;
     cursor: pointer;
 }
-@media screen and (max-width:420px){
-    .icons i img{
+
+@media screen and (max-width: 420px) {
+    .icons i img {
         width: 20px;
     }
 }
+
 /* navbar top */
 
 /* main content */
-.main-content{
+.main-content {
     width: 100%;
     height: 90vh;
     background-image: url(../image/background.png);
@@ -54,33 +63,39 @@
 }
 
 /* navbar */
-#navbar-color{
-    background-color: rgba(238,224,208);
+#navbar-color {
+    background-color: rgba(238, 224, 208);
 }
-.navbar-nav{
+
+.navbar-nav {
     margin: auto;
 }
-.nav-link{
+
+.nav-link {
     margin-left: 30px;
     font-weight: bold;
     color: black;
     transition: 0.5s ease;
     cursor: pointer;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #eaa600;
 }
+
 /* navbar */
 
 /* content */
-.content{
+.content {
     margin-top: 100px;
     margin-left: 60px;
 }
-.content h1{
+
+.content h1 {
     font-size: 50px;
 }
-#btn1 button{
+
+#btn1 button {
     width: 150px;
     height: 32px;
     background: transparent;
@@ -90,20 +105,23 @@
     transition: 0.5s ease;
     cursor: pointer;
 }
-#btn1 button:hover{
+
+#btn1 button:hover {
     background-color: #f8dd97;
 }
-@media screen and (max-width:420px){
-    .content h1{
+
+@media screen and (max-width: 420px) {
+    .content h1 {
         font-size: 30px;
     }
 }
+
 /* content */
 
 /* main content */
 
 /* card1 */
-#btn2 button{
+#btn2 button {
     width: 100px;
     height: 30px;
     background: transparent;
@@ -111,30 +129,36 @@
     transition: 0.5s ease;
     cursor: pointer;
 }
-#btn2 button:hover{
-    background-color: rgba(238,224,208);
+
+#btn2 button:hover {
+    background-color: rgba(238, 224, 208);
 }
+
 /* card1 */
 
 /* card2 */
-#tpc{
+#tpc {
     box-shadow: 0 0 5px black;
     transition: 0.5s ease;
     cursor: pointer;
 }
-#tpc:hover{
+
+#tpc:hover {
     transform: translateY(-10px);
 }
+
 /* card2 */
 
 /* card3 */
-#c p{
+#c p {
     font-weight: bold;
 }
-#btn3{
+
+#btn3 {
     text-align: center;
 }
-#btn3 button{
+
+#btn3 button {
     width: 150px;
     height: 30px;
     background: transparent;
@@ -142,16 +166,19 @@
     transition: 0.5s ease;
     cursor: pointer;
 }
-#btn3 button:hover{
-    background-color: rgba(238,224,208);
+
+#btn3 button:hover {
+    background-color: rgba(238, 224, 208);
 }
-@media screen and (max-width:895px){
-    #btn3 button{
+
+@media screen and (max-width: 895px) {
+    #btn3 button {
         width: 100px;
     }
 }
+
 /* card3 */
-#btn4 button{
+#btn4 button {
     width: 150px;
     height: 30px;
     background: transparent;
@@ -159,34 +186,46 @@
     transition: 0.5s ease;
     cursor: pointer;
 }
-#btn4 button:hover{
-    background-color: rgba(238,224,208);
+
+#btn4 button:hover {
+    background-color: rgba(238, 224, 208);
 }
+
 /* footer */
-#footer{
+#footer {
     width: 100%;
     background-color: black;
     margin-top: 200px;
 }
-#footer h1{
+
+#footer h1 {
     color: white;
     padding-top: 30px;
 }
-#footer p{
+
+#footer p {
     color: white;
 }
-.icons i{
-    color: rgba(238,224,208);
+
+.icons i {
+    color: rgba(238, 224, 208);
     font-size: 30px;
     cursor: pointer;
 }
-.copyright{
+
+.copyright {
     color: white;
     margin-top: 20px;
 }
-.credite{
+
+.credite {
     color: white;
 }
+
+.wrapper {
+    min-height: calc(100vh - 600px);
+}
+
 /* footer */
 
 /* Carousel */
@@ -228,7 +267,7 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -275,8 +314,12 @@
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 .carousel-text {
@@ -294,13 +337,15 @@
     padding: 20px;
 }
 
-@media screen and (max-width:895px){
+@media screen and (max-width: 895px) {
     .product-container {
         flex-direction: column;
     }
+
     .carousel-text {
         margin: auto;
     }
+
     .carousel {
         margin: auto;
     }
@@ -330,4 +375,99 @@
 .rating-result > span.active {
     color: gold;
     background: white;
+}
+
+.shopping-cart {
+    flex-direction: column;
+    margin: 50px;
+    min-height: calc(100vh - 600px);
+}
+
+.shopping-cart-item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border-style: solid;
+    border-color: #717171;
+    border-radius: 8px;
+    box-shadow: #bbbbbb;
+    position: relative;
+}
+
+.shopping-cart-item .shopping-cart-item-name {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.shopping-cart-item .shopping-cart-item-price {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.shopping-cart-item .shopping-cart-item-quantity {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#btn5 {
+    text-align: center;
+    font-size: 15px;
+}
+
+#btn5 button {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#btn5 button:hover {
+    background-color: rgba(238, 224, 208);
+}
+
+.shopping-cart-counter {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.shopping-cart-total-price-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto 10px;
+    position:absolute;
+    right: 5%;
+    top: 30%;
+}
+
+.shopping-cart-data {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 710px) {
+    .shopping-cart-data {
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        right: 5%;
+        top: 15%;
+    }
+
+    .shopping-cart-total-price-item {
+        position: static;
+    }
 }
