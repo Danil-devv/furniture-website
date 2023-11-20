@@ -1,5 +1,6 @@
 let data = []
 let banned  = []
+let jsonProducts = []
 
 
 function update() {
@@ -99,6 +100,22 @@ function filterByPrice() {
     update();
 }
 
+function resetFilter() {
+    for (let i = 0; i < data.length; i++) {
+        banned[i] = false;
+    }
+
+    update();
+}
+
+function cancelSorting() {
+    for (let i = 0; i < jsonProducts.length; i++) {
+        data[i] = jsonProducts[i];
+    }
+
+    update();
+}
+
 fetch("./data/products.json")
     .then(function(response){
         return response.json();
@@ -111,6 +128,7 @@ fetch("./data/products.json")
             product = products[i-1];
             data.push(product)
             banned.push(false)
+            jsonProducts.push(product)
             out += `<div class="col-md-3 py-3 py-md-0">
                             <div class="card" id="tpc">
                                 <img src='${product.image}' alt="" class="card image-top" height="250px">
@@ -118,7 +136,7 @@ fetch("./data/products.json")
                                     <h3 class="card-titel text-center">${product.name}</h3>
                                     <p class="card-text text-center">$${product.price}</p>
                                     <div id="btn3"><a href="product_card.html?id=${product.id-1}"><button>About</button></a></div>
-                                    <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to card</button></a></div>
+                                    <div id="btn3" onclick="addToCart(${product.id-1})"><a><button>Add to cart</button></a></div>
                                 </div>
                             </div>
                         </div>`;

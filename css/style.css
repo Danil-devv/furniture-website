@@ -165,16 +165,24 @@
     border: 1px solid black;
     transition: 0.5s ease;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 #btn3 button:hover {
     background-color: rgb(106, 238, 219);
 }
 
-@media screen and (max-width: 895px) {
+@media screen and (max-width: 990px) {
     #btn3 button {
 
         width: 100px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    #btn3 button {
+
+        width: 150px;
     }
 }
 
@@ -561,4 +569,10 @@
 .filter-container.show {
     display: block;
     width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .col-md-3 {
+        width: 50%;
+    }
 }
