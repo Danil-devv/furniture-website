@@ -1,7 +1,8 @@
 function update() {
     let placeholder = document.querySelector("#data-output");
     let out = "";
-
+    let total = 0;
+    let totalCost = 0;
     // iterate localStorage
     for (let i = 0; i < sessionStorage.length; i++) {
 
@@ -10,6 +11,9 @@ function update() {
 
         // use key name to retrieve the corresponding value
         let product = JSON.parse(sessionStorage.getItem(key));
+
+        total += product.quantity;
+        totalCost += product.quantity * product.price;
 
         out += `<div class="shopping-cart-item">
                         <img src=${product.image} width="150px" height="150px">
@@ -28,7 +32,17 @@ function update() {
                     </div>`;
     }
 
+    if (totalCost !== 0) {
+        out += `<div class="cart-total-cost">
+                <h4>Total:<br/>$${totalCost}</h4>
+            </div>`
+    }
+
     placeholder.innerHTML = out;
+
+    // updating count of products in header
+    placeholder = document.querySelector("#header-product-count");
+    placeholder.innerHTML = `${total}`;
 }
 
 function decrementCount(id) {
@@ -56,7 +70,7 @@ fetch("./data/products.json")
     .then(function(products){
         let placeholder = document.querySelector("#data-output");
         let out = "";
-
+        let totalCost = 0;
         // iterate localStorage
         for (let i = 0; i < sessionStorage.length; i++) {
 
@@ -65,6 +79,7 @@ fetch("./data/products.json")
 
             // use key name to retrieve the corresponding value
             let product = JSON.parse(sessionStorage.getItem(key));
+            totalCost += product.quantity * product.price;
 
             out += `<div class="shopping-cart-item">
                         <img src=${product.image} width="150px" height="150px">
@@ -81,6 +96,12 @@ fetch("./data/products.json")
                             </div>
                         </div>
                     </div>`;
+        }
+
+        if (totalCost !== 0) {
+            out += `<div class="cart-total-cost">
+                <h4>Total:<br/>$${totalCost}</h4>
+            </div>`
         }
 
         placeholder.innerHTML = out;

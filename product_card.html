@@ -40,6 +40,7 @@
         <div class="icons">
             <i><img src="./image/heart.png" alt="" width="25px"></i>
             <a href="shopping_cart.html"><i><img src="./image/shopping-cart_2.png" alt="" width="25px"></i></a>
+            <span id="header-product-count"></span>
         </div>
     </div>
 </div>
@@ -76,15 +77,15 @@
 
 <!-- footer -->
 <footer id="footer">
-    <h1 class="text-center">Furniture</h1>
-    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    <h1 class="text-center">FurnishMe</h1>
+    <p class="text-center">Transform Your Home into a Haven of Beauty</p>
     <div class="icons text-center">
         <i class="bx bxl-telegram"></i>
         <i class="bx bxl-google"></i>
         <i class="bx bxl-discord"></i>
     </div>
     <div class="copyright text-center">
-        &copy; Copyright <strong><span>Furniture</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Semenov Daniil</span></strong>. All Rights Reserved
     </div>
     <div class="credite text-center">
         RTU MIREA Course work
@@ -94,6 +95,21 @@
 
 <!-- script -->
 <script src="scripts/product_card_generator.js"></script>
+<script>
+    // updating count of products in header
+    let placeholder = document.querySelector("#header-product-count");
+    let total = 0;
+    for (let i = 0; i < sessionStorage.length; i++) {
+        // set iteration key name
+        let key = sessionStorage.key(i);
+
+        // use key name to retrieve the corresponding value
+        let product = JSON.parse(sessionStorage.getItem(key));
+        total += product.quantity;
+    }
+    placeholder.innerHTML = `${total}`;
+</script>
+<!-- Link to the javascript file -->
 <!-- script -->
 
 </body>

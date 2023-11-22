@@ -43,12 +43,18 @@
 .icons i img {
     margin-left: 10px;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 @media screen and (max-width: 420px) {
     .icons i img {
         width: 20px;
     }
+}
+
+.icons i img:hover {
+    background-color: rgb(106, 238, 219);
+    border-radius: 10px;
 }
 
 /* navbar top */
@@ -216,6 +222,10 @@
     color: white;
 }
 
+.icons {
+    flex-flow: row nowrap;
+}
+
 .icons i {
     color: rgb(106, 238, 219);
     font-size: 30px;
@@ -346,7 +356,7 @@
     padding: 20px;
 }
 
-@media screen and (max-width: 895px) {
+@media screen and (max-width: 1100px) {
     .product-container {
         flex-direction: column;
     }
@@ -575,4 +585,20 @@
     .col-md-3 {
         width: 50%;
     }
+}
+
+@media screen and (max-width: 1000px) {
+    #about-row {
+        flex-direction: column;
+    }
+}
+.data-output {
+    display: flex;
+    flex-direction: row;
+}
+.cart-total-cost {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    position: relative;
 }

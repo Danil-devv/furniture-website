@@ -41,6 +41,7 @@
         <div class="icons">
             <i><img src="./image/heart.png" alt="" width="25px"></i>
             <a href="shopping_cart.html"><i><img src="./image/shopping-cart_2.png" alt="" width="25px"></i></a>
+            <span id="header-product-count"></span>
         </div>
     </div>
 </div>
@@ -73,11 +74,10 @@
     </nav>
 
     <div class="content">
-        <h1>Make Your Home
-            <br> Modern Design.
+        <h1>Elevate Your Living
+            <br> with Contemporary Style.
         </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minus modi illum cumque velit
-            consectetur?</p>
+        <p>Crafting Comfort, Shaping Style: Your Home, Our Signature.</p>
         <div id="btn1"><a href="shop.html">
             <button>Shop Now</button>
         </a></div>
@@ -94,9 +94,9 @@
             <div class="card">
                 <img src="./image/c1.png" alt="" class="card image-top" height="200px">
                 <div class="card-body">
-                    <h5 class="card-titel text-center">CUSTOM MENUS</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam vitae
-                        facere eius modi iure possimus, soluta ea inventore. Omnis!</p>
+                    <h5 class="card-titel text-center">Uncompromising Quality</h5>
+                    <p class="text-center">Crafting furniture that reflects the unique style of each customer, creating
+                        homes that are personalized havens of comfort.</p>
                 </div>
             </div>
         </div>
@@ -104,9 +104,9 @@
             <div class="card">
                 <img src="./image/c2.png" alt="" class="card image-top" height="200px">
                 <div class="card-body">
-                    <h5 class="card-titel text-center">SMARTEST WAY</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam vitae
-                        facere eius modi iure possimus, soluta ea inventore. Omnis!</p>
+                    <h5 class="card-titel text-center">Individuality and Comfort</h5>
+                    <p class="text-center">Our philosophy is rooted in a commitment to consistently deliver top-notch
+                        quality, using premium materials.</p>
                 </div>
             </div>
         </div>
@@ -114,9 +114,9 @@
             <div class="card">
                 <img src="./image/c3.png" alt="" class="card image-top" height="200px">
                 <div class="card-body">
-                    <h5 class="card-titel text-center">USER FRIENDLEY</h5>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsam vitae
-                        facere eius modi iure possimus, soluta ea inventore. Omnis!</p>
+                    <h5 class="card-titel text-center">Innovation in Design</h5>
+                    <p class="text-center">We believe in pushing the boundaries of design while maintaining a timeless
+                        elegance, our furniture stands the test.</p>
                 </div>
             </div>
         </div>
@@ -126,21 +126,37 @@
 
 <!-- footer -->
 <footer id="footer">
-    <h1 class="text-center">Furniture</h1>
-    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    <h1 class="text-center">FurnishMe</h1>
+    <p class="text-center">Transform Your Home into a Haven of Beauty</p>
     <div class="icons text-center">
         <i class="bx bxl-telegram"></i>
         <i class="bx bxl-google"></i>
         <i class="bx bxl-discord"></i>
     </div>
     <div class="copyright text-center">
-        &copy; Copyright <strong><span>Furniture</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Semenov Daniil</span></strong>. All Rights Reserved
     </div>
     <div class="credite text-center">
         RTU MIREA Course work
     </div>
 </footer>
 <!-- footer -->
+
+<script>
+    // updating count of products in header
+    let placeholder = document.querySelector("#header-product-count");
+    let total = 0;
+    for (let i = 0; i < sessionStorage.length; i++) {
+        // set iteration key name
+        let key = sessionStorage.key(i);
+
+        // use key name to retrieve the corresponding value
+        let product = JSON.parse(sessionStorage.getItem(key));
+        total += product.quantity;
+    }
+    placeholder.innerHTML = `${total}`;
+</script>
+<!-- Link to the javascript file -->
 
 </body>
 </html>

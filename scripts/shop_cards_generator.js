@@ -50,6 +50,19 @@ function addToCart(id) {
         product.quantity++
         sessionStorage.setItem(String(id), JSON.stringify(product))
     }
+
+    // updating count of products in header
+    let placeholder = document.querySelector("#header-product-count");
+    let total = 0;
+    for (let i = 0; i < sessionStorage.length; i++) {
+        // set iteration key name
+        let key = sessionStorage.key(i);
+
+        // use key name to retrieve the corresponding value
+        let product = JSON.parse(sessionStorage.getItem(key));
+        total += product.quantity;
+    }
+    placeholder.innerHTML = `${total}`;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -129,7 +142,7 @@ fetch("./data/products.json")
             data.push(product)
             banned.push(false)
             jsonProducts.push(product)
-            out += `<div class="col-md-3 py-3 py-md-0">
+            out += `<div class="col-lg-3 col-md-6 col-sm-12 py-3">
                             <div class="card" id="tpc">
                                 <img src='${product.image}' alt="" class="card image-top" height="250px">
                                 <div class="card-body">
