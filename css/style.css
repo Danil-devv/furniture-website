@@ -43,12 +43,18 @@
 .icons i img {
     margin-left: 10px;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 @media screen and (max-width: 420px) {
     .icons i img {
         width: 20px;
     }
+}
+
+.icons i img:hover {
+    background-color: rgb(106, 238, 219);
+    border-radius: 10px;
 }
 
 /* navbar top */
