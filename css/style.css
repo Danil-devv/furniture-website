@@ -249,9 +249,22 @@
 
 /* Carousel */
 .carousel {
-    margin-left: 2em;
     max-width: 500px;
-    min-width: 500px;
+    min-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.carousel-image {
+    height: 500px;
+    width: 500px;
+}
+
+@media screen and (max-width: 550px) {
+    .carousel-image {
+        width: 350px;
+        height: 350px;
+    }
 }
 
 /* Slideshow container */
@@ -270,6 +283,8 @@
     width: auto;
     margin-top: -22px;
     padding: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
     color: white;
     font-weight: bold;
     font-size: 18px;

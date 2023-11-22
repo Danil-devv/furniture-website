@@ -71,7 +71,7 @@ fetch("./data/products.json")
 
                                 for (let i = 0; i < product_info[id].images.length; i++) {
                                     out += `<div class="mySlides fade">
-                                <img src="${product_info[id].images[i]}" style="height:500px; width:500px">
+                                <img src="${product_info[id].images[i]}" class="carousel-image">
                             </div>`
                                 }
                                 out += `<!-- Full-width images with number and caption text -->`
