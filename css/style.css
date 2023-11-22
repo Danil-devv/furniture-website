@@ -617,3 +617,26 @@
     max-width: 1200px;
     position: relative;
 }
+
+@media screen and (max-width: 520px) {
+    .shopping-cart-data {
+        position: sticky;
+        margin: auto;
+    }
+    .shopping-cart-counter {
+        margin: auto;
+    }
+    .shopping-cart-item-name {
+        margin: auto;
+        text-align: center;
+    }
+    .shopping-cart-total-price-item {
+        margin: auto;
+    }
+    .shopping-cart-item-image {
+        margin: auto;
+    }
+    .shopping-cart-item {
+        flex-direction: column;
+    }
+}
