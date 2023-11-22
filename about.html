@@ -41,6 +41,7 @@
         <div class="icons">
             <i><img src="./image/heart.png" alt="" width="25px"></i>
             <a href="shopping_cart.html"><i><img src="./image/shopping-cart_2.png" alt="" width="25px"></i></a>
+            <span id="header-product-count"></span>
         </div>
     </div>
 </div>
@@ -112,6 +113,22 @@
     </div>
 </footer>
 <!-- footer -->
+
+<script>
+    // updating count of products in header
+    let placeholder = document.querySelector("#header-product-count");
+    let total = 0;
+    for (let i = 0; i < sessionStorage.length; i++) {
+        // set iteration key name
+        let key = sessionStorage.key(i);
+
+        // use key name to retrieve the corresponding value
+        let product = JSON.parse(sessionStorage.getItem(key));
+        total += product.quantity;
+    }
+    placeholder.innerHTML = `${total}`;
+</script>
+<!-- Link to the javascript file -->
 
 </body>
 </html>

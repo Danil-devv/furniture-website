@@ -50,6 +50,19 @@ function addToCart(id) {
         product.quantity++
         sessionStorage.setItem(String(id), JSON.stringify(product))
     }
+
+    // updating count of products in header
+    let placeholder = document.querySelector("#header-product-count");
+    let total = 0;
+    for (let i = 0; i < sessionStorage.length; i++) {
+        // set iteration key name
+        let key = sessionStorage.key(i);
+
+        // use key name to retrieve the corresponding value
+        let product = JSON.parse(sessionStorage.getItem(key));
+        total += product.quantity;
+    }
+    placeholder.innerHTML = `${total}`;
 }
 
 document.addEventListener('DOMContentLoaded', function () {

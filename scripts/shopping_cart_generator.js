@@ -1,7 +1,7 @@
 function update() {
     let placeholder = document.querySelector("#data-output");
     let out = "";
-
+    let total = 0;
     // iterate localStorage
     for (let i = 0; i < sessionStorage.length; i++) {
 
@@ -10,6 +10,8 @@ function update() {
 
         // use key name to retrieve the corresponding value
         let product = JSON.parse(sessionStorage.getItem(key));
+
+        total += product.quantity;
 
         out += `<div class="shopping-cart-item">
                         <img src=${product.image} width="150px" height="150px">
@@ -29,6 +31,10 @@ function update() {
     }
 
     placeholder.innerHTML = out;
+
+    // updating count of products in header
+    placeholder = document.querySelector("#header-product-count");
+    placeholder.innerHTML = `${total}`;
 }
 
 function decrementCount(id) {

@@ -222,6 +222,10 @@
     color: white;
 }
 
+.icons {
+    flex-flow: row nowrap;
+}
+
 .icons i {
     color: rgb(106, 238, 219);
     font-size: 30px;
