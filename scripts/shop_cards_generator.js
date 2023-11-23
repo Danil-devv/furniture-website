@@ -14,7 +14,7 @@ function update() {
         }
         cnt += 1;
         product = data[i-1];
-        out += `<div class="col-md-3 py-3 py-md-0">
+        out += `<div class="col-lg-3 col-md-6 col-sm-12 py-3">
                             <div class="card" id="tpc">
                                 <img src='${product.image}' alt="" class="card image-top" height="250px">
                                 <div class="card-body">
